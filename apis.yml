@@ -1,0 +1,29 @@
+aid: tripo3d
+url: https://raw.githubusercontent.com/api-evangelist/tripo3d/refs/heads/main/apis.yml
+name: Tripo3D
+x-type: company
+description: >-
+  Tripo3D (by VAST) is an AI 3D generation platform with text-to-3D, image-to-3D, and mesh refinement APIs producing game-ready 3D assets.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI
+  - 3D
+  - Generation
+  - API
+  - Mesh
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.tripo3d.ai/
+  - type: Plans
+    url: plans/tripo3d-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/tripo3d-rate-limits.yml
+  - type: FinOps
+    url: finops/tripo3d-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
