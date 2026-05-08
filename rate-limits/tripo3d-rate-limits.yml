@@ -5,7 +5,7 @@ provider: Tripo3D
 providerId: tripo3d
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: partial
 tags:
 - AI
 - 3D
@@ -15,19 +15,31 @@ tags:
 - Rate Limiting
 - Quotas
 - Throttling
-description: Placeholder rate-limit artifact for Tripo3D. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: >-
+  Tripo3D uses async task-based REST: submit a task and poll for completion. HTTP RPS limits
+  are not publicly documented; quotas are bounded by account credit balance and
+  concurrent-task caps tied to the Platform plan tier.
+notes: Verify task concurrency cap with Tripo support for production volumes.
 sources:
-- https://www.tripo3d.ai/
+- https://platform.tripo3d.ai/docs/
 responseCodes:
   throttled: 429
 limits:
-- name: Default
+- name: Concurrent Tasks
   scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  metric: concurrent_tasks
+  limit: see Platform plan tier
+- name: Credit Balance
+  scope: account
+  metric: credits
+  limit: prepaid
+- name: HTTP Requests
+  scope: account
+  metric: requests
+  limit: not publicly documented
 policies:
+- name: Async Polling
+  description: Submit task via POST, poll task GET endpoint until status reaches success.
 - name: Backoff Strategy
   description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
 maintainers:

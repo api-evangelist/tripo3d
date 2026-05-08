@@ -3,7 +3,10 @@ url: https://raw.githubusercontent.com/api-evangelist/tripo3d/refs/heads/main/ap
 name: Tripo3D
 x-type: company
 description: >-
-  Tripo3D (by VAST) is an AI 3D generation platform with text-to-3D, image-to-3D, and mesh refinement APIs producing game-ready 3D assets.
+  Tripo3D (by VAST) is an AI 3D generation platform with text-to-3D, image-to-3D, mesh
+  refinement, and texturing APIs producing game-ready 3D assets. The Tripo API uses an async
+  task-based REST pattern at https://api.tripo3d.ai/v2/openapi/task. Authenticate with API
+  key.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - AI
@@ -11,13 +14,41 @@ tags:
   - Generation
   - API
   - Mesh
+  - Texturing
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: tripo3d:platform
+    name: Tripo3D API
+    description: >-
+      REST API for text-to-3D, image-to-3D, multi-image-to-3D, mesh refinement, retexturing,
+      animation, and rigging. Async task-based pattern (POST /v2/openapi/task to submit, GET
+      to poll) at https://api.tripo3d.ai. Documentation at https://platform.tripo3d.ai/docs/.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://platform.tripo3d.ai/docs/
+    baseURL: https://api.tripo3d.ai/v2/openapi
+    tags:
+      - 3D Generation
+      - Text-to-3D
+      - Image-to-3D
+      - Texturing
+      - Animation
+      - Async
+    properties:
+      - type: Documentation
+        url: https://platform.tripo3d.ai/docs/
+      - type: SignUp
+        url: https://platform.tripo3d.ai/
+      - type: Pricing
+        url: https://platform.tripo3d.ai/docs/billing
+      - type: ProductPage
+        url: https://www.tripo3d.ai/api
 common:
   - type: Website
     url: https://www.tripo3d.ai/
+  - type: Documentation
+    url: https://platform.tripo3d.ai/docs/
   - type: Plans
     url: plans/tripo3d-plans-pricing.yml
   - type: RateLimits

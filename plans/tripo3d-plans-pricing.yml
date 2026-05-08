@@ -5,37 +5,77 @@ provider: Tripo3D
 providerId: tripo3d
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: partial
 tags:
 - AI
 - 3D
 - Generation
 - API
 - Mesh
+- Texturing
 - Plans
-description: Placeholder plans/pricing artifact for Tripo3D. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled.
+description: >-
+  Tripo offers a tiered pricing model: a free consumer plan plus paid tiers (Studio,
+  Business) that unlock higher-quality models, faster processing, and broader export
+  permissions. API access is sold separately on the Tripo Platform; per-call pricing
+  varies by task type (text-to-3D, image-to-3D, refinement, texture). Refer to
+  platform.tripo3d.ai/docs/billing for current rate sheet.
+notes: Per-API rate sheet is on Tripo's billing docs; pricing model is task-credit-based.
 sources:
-- https://www.tripo3d.ai/
+- https://www.tripo3d.ai/api
+- https://www.tripo3d.ai/pricing
+- https://platform.tripo3d.ai/docs/billing
 plans:
-- id: tripo3d-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+- id: tripo3d-free
+  name: Free (Consumer)
+  type: free
+  description: Free experimentation tier on the consumer site (not for production).
   entries:
-  - label: API Access
-    name: api_access
+  - label: Plan Fee
+    name: plan_fee
     type: flat
-    metric: varies
+    metric: month
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0 USD/month
+    userMultiplied: false
+- id: tripo3d-api
+  name: API (Platform Credits)
+  type: usage
+  description: Task-credit-based API access (separate from consumer subscriptions).
+  entries:
+  - label: Per Task (varies by type)
+    name: per_task
+    type: per_unit
+    metric: task
     limit: -1
     timeFrame: usage
     geo: global
     unit: 1
-    price: see https://www.tripo3d.ai/
+    price: see Tripo Platform billing docs (varies by task type)
     userMultiplied: false
   elements:
-  - name: Pending Reconciliation
+  - name: Text-to-3D
+  - name: Image-to-3D
+  - name: Multi-image-to-3D
+  - name: Refinement / Texturing / Rigging / Animation
+- id: tripo3d-business
+  name: Business / Enterprise
+  type: enterprise
+  description: Custom contracts for high-volume integrators with reliability and integration support.
+  entries:
+  - label: Enterprise Contract
+    name: enterprise
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: annual
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
