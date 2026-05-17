@@ -1,7 +1,7 @@
 aid: tripo3d
 url: https://raw.githubusercontent.com/api-evangelist/tripo3d/refs/heads/main/apis.yml
 name: Tripo3D
-x-type: company
+kind: company
 description: >-
   Tripo3D (by VAST) is an AI 3D generation platform with text-to-3D, image-to-3D, mesh
   refinement, and texturing APIs producing game-ready 3D assets. The Tripo API uses an async
