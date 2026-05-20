@@ -45,6 +45,8 @@ apis:
       - type: ProductPage
         url: https://www.tripo3d.ai/api
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/tripoai
   - type: Website
     url: https://www.tripo3d.ai/
   - type: Documentation
