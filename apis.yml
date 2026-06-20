@@ -7,7 +7,7 @@ description: >-
   refinement, and texturing APIs producing game-ready 3D assets. The Tripo API uses an async
   task-based REST pattern at https://api.tripo3d.ai/v2/openapi/task. Authenticate with API
   key.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - 3D
@@ -25,7 +25,7 @@ apis:
       REST API for text-to-3D, image-to-3D, multi-image-to-3D, mesh refinement, retexturing,
       animation, and rigging. Async task-based pattern (POST /v2/openapi/task to submit, GET
       to poll) at https://api.tripo3d.ai. Documentation at https://platform.tripo3d.ai/docs/.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://platform.tripo3d.ai/docs/
     baseURL: https://api.tripo3d.ai/v2/openapi
     tags:
