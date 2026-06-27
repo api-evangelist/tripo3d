@@ -38,7 +38,7 @@ apis:
     properties:
       - type: Documentation
         url: https://platform.tripo3d.ai/docs/
-      - type: SignUp
+      - type: Signup
         url: https://platform.tripo3d.ai/
       - type: Pricing
         url: https://platform.tripo3d.ai/docs/billing
