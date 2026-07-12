@@ -45,6 +45,8 @@ apis:
       - type: ProductPage
         url: https://www.tripo3d.ai/api
 common:
+  - type: DomainSecurity
+    url: security/tripo3d-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/tripoai
   - type: Website
@@ -57,6 +59,8 @@ common:
     url: rate-limits/tripo3d-rate-limits.yml
   - type: FinOps
     url: finops/tripo3d-finops.yml
+  - url: https://www.tripo3d.ai/blog
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
