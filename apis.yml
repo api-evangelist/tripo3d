@@ -21,6 +21,12 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tripo3d.png
 tags:
+  - Artificial Intelligence
+  - 3D
+  - Generation
+  - Mesh
+  - Texturing
+tags_raw:
   - AI
   - 3D
   - Generation
