@@ -7,6 +7,17 @@ description: >-
   refinement, and texturing APIs producing game-ready 3D assets. The Tripo API uses an async
   task-based REST pattern at https://api.tripo3d.ai/v2/openapi/task. Authenticate with API
   key.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
